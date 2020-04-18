@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-merge="true"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+  <!-- defining parent bean  -->
+   <bean id="eng" class="com.nt.beans.Engineering">
+   <property name="subject">
+   <list>
+   <value>M1</value>
+   <value>Physics</value>
+   <value>Chemistry</value>
+   <value>C</value>
+   </list>
+   </property>
+   </bean>
+   <!-- defining engcomp bean  -->
+   <bean id="comp" class="com.nt.beans.EngComp" parent="eng" >
+   <property name="subject" >
+   <list merge="true" >
+   <value>Data Structure</value>
+   <value>Computer Gharphics</value>
+   </list>
+   </property>
+   </bean>
+   <!-- by using merge="true" in collection tag -->
+     <bean id="electro" class="com.nt.beans.EngElectronics" parent="eng">
+   <property name="subject">
+   <list merge="true">
+   <value>Operating system</value>
+   <value>Machine Intro</value>
+   <value>System ENG</value>
+   </list>
+   </property>
+   </bean>
+</beans>
