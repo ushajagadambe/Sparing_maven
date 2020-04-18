@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+     <!-- cfg of address class -->
+    <bean id="ad" class="com.nt.beans.EmpAddress">
+   <constructor-arg name="laneNo" value="1"></constructor-arg>
+   <constructor-arg name="area" value="Nareshit"></constructor-arg>
+   <constructor-arg name="streetname" value="Ameerpeth"></constructor-arg>
+   <constructor-arg name="pincode" value="418678"></constructor-arg>
+    </bean>
+<bean id="empdt" class="com.nt.beans.EmployeDeatils">
+<constructor-arg name="id" value="2010"></constructor-arg>
+<constructor-arg name="empname" value="usha"> </constructor-arg>
+<constructor-arg name="empaddress" ref="ad"></constructor-arg>
+<constructor-arg name="age" value="21"></constructor-arg>
+</bean>
+</beans>
