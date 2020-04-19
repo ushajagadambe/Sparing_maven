@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+<bean id="stud" class="com.nt.beans.Student" scope="singleton">
+<property name="name" value="usha"></property>
+<property name="rollno" value="101"></property>
+</bean>
+<bean id="emp" class="com.nt.beans.Employee" scope="prototype">
+<property name="id" value="2001"></property>
+<property name="name" value="amol"></property>
+<property name="age" value="25"></property>
+</bean>
+<bean id="pri" class="com.nt.beans.Printer" scope="prototype" factory-method="getInstance"></bean>
+</beans>
